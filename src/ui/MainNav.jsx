@@ -70,7 +70,7 @@ function MainNav() {
             <HiOutlineUser />
             <span>Users</span>
           </StyledNavLink>
-          <StyledNavLink to="users">
+          <StyledNavLink to="settings">
             <HiOutlineCog6Tooth />
             <span>Settings</span>
           </StyledNavLink>

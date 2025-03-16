@@ -35,6 +35,8 @@ export async function createEditCabin(newCabin, id) {
     throw new Error("Cabin could not be deleted");
   }
 
+  if(hasImage) return data;
+
   //2. Upload Image
   const { error: storageError } = await supabase
   .storage
