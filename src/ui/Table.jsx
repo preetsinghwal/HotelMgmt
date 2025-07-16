@@ -77,7 +77,7 @@ function Header({ children }) {
     <StyledHeader role="row" columns={columns} as="header">
       {children}
     </StyledHeader>
-  )
+  );
 }
 
 function Row({ children }) {
@@ -87,10 +87,14 @@ function Row({ children }) {
     <StyledRow role="row" columns={columns}>
       {children}
     </StyledRow>
-  )
+  );
 }
 
-function Body({ children }) {}
+function Body({ data, render }) {
+  if (!data.length) return <Empty>No data at this moment</Empty>;
+
+  return <StyledBody>{data.map(render)}</StyledBody>;
+}
 
 Table.Header = Header;
 Table.Row = Row;
